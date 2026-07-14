@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Matching Algorithm Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        String Matching Visualizer
+    </h1>
+
+    <p class="subtitle">
+        Compare Naive, KMP and Rabin-Karp Algorithms
+    </p>
+
+    <div class="card">
+
+        <label>Text</label>
+
+        <textarea
+            id="text"
+            rows="5"
+            placeholder="Enter Text..."
+        >AABAACAADAABAABA</textarea>
+
+        <label>Pattern</label>
+
+        <input
+            type="text"
+            id="pattern"
+            value="AABA"
+            placeholder="Enter Pattern">
+
+        <button onclick="runAlgorithms()">
+            <i class="fa-solid fa-play"></i>
+            Run Algorithms
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Results</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Matches</th>
+                    <th>Comparisons</th>
+                    <th>Time (ms)</th>
+                </tr>
+            </thead>
+
+            <tbody id="resultBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="winner">
+
+        <h2>🏆 Fastest Algorithm</h2>
+
+        <div id="winner">
+            Click "Run Algorithms"
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Performance Comparison</h2>
+
+        <canvas id="chart"></canvas>
+
+    </div>
+
+    <footer>
+
+        Made with ❤️ for Design & Analysis of Algorithms
+
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
